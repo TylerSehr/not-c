@@ -6,7 +6,7 @@
 /*   By: tsehr <tsehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 19:58:35 by tsehr             #+#    #+#             */
-/*   Updated: 2019/07/18 18:29:57 by tsehr            ###   ########.fr       */
+/*   Updated: 2019/07/24 19:32:32 by tsehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,25 @@
 # include <stdbool.h>
 
 typedef struct Types {
-   int integer;
-   char *string;
-   bool boolean;
+   char type;
+   void *value;
+   var *next;
 } var;
+
+// typedef struct ArrayTypes {
+//    char type;
+//    void *value;
+//    var *next;
+// } array_var;
 
 # define LAMBDA(c_) ({ c_ _;})
 
-# define REQUIRE(x, y) if (!x) return (y);
+char *build_var_errors = {
+   "variable build succeeded",
+   "build() has failed with null or invalid params in Types.c"   
+};
 
+# define REQUIRE(x, y) if (!x) return (y);
 
 
 

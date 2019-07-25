@@ -1,0 +1,26 @@
+partial dynamic typing. var type is saved in struct, must declare as a certain var, 
+	but this can be modified later if needed.
+methods can be added to certain types to concat strings etc.
+
+struct to hold all types, has this format:
+{
+	type: '1'
+	value: 
+}
+all types are a struct, they contain type info saved as well as the value
+
+
+all arrays are linked lists. arrays can hold all types
+	Array `variable name` = Array().
+Array push pop etc methods.
+"at" method allows you to put in index and return value. 
+
+Automatic garbage collection. all major variables get pushed to this array automatically.
+
+Class variable implementation????
+	custom methods are saved in a linked list!
+	prewritten function finds proper method
+
+Arrow Functions!
+
+Log function!
